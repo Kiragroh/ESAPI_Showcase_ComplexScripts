@@ -13,6 +13,7 @@
 ![Test Image 3](https://github.com/Kiragroh/ESAPI_Showcase_ComplexScripts/blob/master/SRS-Check-GUI.png)
 
 4.) Eclipse-DataMiner
+- aquire data of specific patients or all or all but filtered
 - inspired by the GUI-structure from https://github.com/tkmd94/EclipseDataMiner but the output and features are mostly changed
 
 ![Test Image 4](https://github.com/Kiragroh/ESAPI_Showcase_ComplexScripts/blob/master/EclipseDataMiner.png)
