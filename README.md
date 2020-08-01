@@ -12,3 +12,13 @@
 - calculate Paddick-CI & -GI in Eclipse without HyperArc-License for single or multiple targets in plans or plansums.
 ![Test Image 3](https://github.com/Kiragroh/ESAPI_Showcase_ComplexScripts/blob/master/SRS-Check-GUI.png)
 
+4.) Eclipse-DataMiner
+- inspired by the GUI-structure from https://github.com/tkmd94/EclipseDataMiner but the output and features are mostly changed
+
+![Test Image 4](https://github.com/Kiragroh/ESAPI_Showcase_ComplexScripts/blob/master/Eclipse Data miner.png)
+![Test Image 5](https://github.com/Kiragroh/ESAPI_Showcase_ComplexScripts/blob/master/Eclipse Data miner2.png)
+![Test Image 6](https://github.com/Kiragroh/ESAPI_Showcase_ComplexScripts/blob/master/Eclipse Data miner3.png)
+![Test Image 7](https://github.com/Kiragroh/ESAPI_Showcase_ComplexScripts/blob/master/Eclipse Data miner4.png)
+![Test Image 8](https://github.com/Kiragroh/ESAPI_Showcase_ComplexScripts/blob/master/Eclipse Data miner5.png)
+
+
