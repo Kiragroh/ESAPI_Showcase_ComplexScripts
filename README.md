@@ -5,7 +5,7 @@
 ![Test Image 1](https://github.com/Kiragroh/ESAPI_Showcase_ComplexScripts/blob/master/AutoContouring_newFeature_boolean.png)
 
 2.) AutoPlan-GUI
-
+- Autoplanning with GUI for User-input. More autoplanning features can easily be added.
 ![Test Image 2](https://github.com/Kiragroh/ESAPI_Showcase_ComplexScripts/blob/master/AutoPlan-GUI.png)
 
 3.) SRS-CalculateIndices-GUI
