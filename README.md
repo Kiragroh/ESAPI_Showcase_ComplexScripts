@@ -16,9 +16,9 @@ Why do I not share them too?:
 - Autoplanning with GUI for User-input. More autoplanning features can easily be added.
 ![Test Image 2](https://github.com/Kiragroh/ESAPI_Showcase_ComplexScripts/blob/master/AutoPlan-GUI.png)
 
-3.) SRS-CalculateIndices-GUI
+3.) STX-CalculateIndices-GUI
 - calculate Paddick-CI & -GI in Eclipse without HyperArc-License for single or multiple targets in plans or plansums.
-![Test Image 3](https://github.com/Kiragroh/ESAPI_Showcase_ComplexScripts/blob/master/SRS-Check-GUI.png)
+![Test Image 3](https://github.com/Kiragroh/ESAPI_Showcase_ComplexScripts/blob/master/STX-Check-GUI.png)
 
 4.) QA-Exporter
 - Standalone script to quickly export RP-files to Third-Party-QA programs
@@ -30,13 +30,13 @@ Why do I not share them too?:
 - aquire data of specific patients or all or all but filtered
 - inspired by the GUI-structure from https://github.com/tkmd94/EclipseDataMiner but the output and features are mostly changed
 - DICOM-Export functionality can be added to ESAPI via an extra DICOM-Daemon (Tutorial: https://github.com/VarianAPIs/Varian-Code-Samples/wiki/Scripting-the-Varian-DICOM-DB-Daemon-with-ESAPI -> Code has to be changed a little bit to work in standalone programs and for more modalities)
-
+![Test Image 9](https://github.com/Kiragroh/ESAPI_Showcase_ComplexScripts/blob/master/EclipseDataMiner6.png)
 ![Test Image 4](https://github.com/Kiragroh/ESAPI_Showcase_ComplexScripts/blob/master/EclipseDataMiner.png)
 
 ![Test Image 5](https://github.com/Kiragroh/ESAPI_Showcase_ComplexScripts/blob/master/EclipseDataMiner2.png)
 
 ![Test Image 6](https://github.com/Kiragroh/ESAPI_Showcase_ComplexScripts/blob/master/EclipseDataMiner3.png)
-
+- example output for one plan (real outout is in .csv-format)
 ![Test Image 7](https://github.com/Kiragroh/ESAPI_Showcase_ComplexScripts/blob/master/EclipseDataMiner4.png)
 
 ![Test Image 8](https://github.com/Kiragroh/ESAPI_Showcase_ComplexScripts/blob/master/EclipseDataMiner5.png)
