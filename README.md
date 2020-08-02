@@ -10,6 +10,8 @@ Why do I not share them too?:
 
 0.) PlanCheck
 - check DoseConstraints and plan parameters for plans or planSums
+- generate Reports with interactive DVH from GUI
+- script structure is adopted from LDClark (https://github.com/LDClark/PlanCheck) but changed a lot 
 ![GIF 1](https://github.com/Kiragroh/ESAPI_Showcase_ComplexScripts/blob/master/PlanCheckWithDVH.gif)
 
 1.) ContouringAssistant
