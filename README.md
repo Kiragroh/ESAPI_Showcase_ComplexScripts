@@ -36,15 +36,12 @@ Why do I not share them too?:
 - aquire data of specific patients or all or all but filtered
 - inspired by the GUI-structure from https://github.com/tkmd94/EclipseDataMiner but the output and features are mostly changed
 - DICOM-Export functionality can be added to ESAPI via an extra DICOM-Daemon (Tutorial: https://github.com/VarianAPIs/Varian-Code-Samples/wiki/Scripting-the-Varian-DICOM-DB-Daemon-with-ESAPI -> Code has to be changed a little bit to work in standalone programs and for more modalities)
-![Test Image 9](https://github.com/Kiragroh/ESAPI_Showcase_ComplexScripts/blob/master/EclipseDataMiner6.png)
+![Test Image 9](https://github.com/Kiragroh/ESAPI_Showcase_ComplexScripts/blob/master/EclipseDataMiner6.PNG)
 ![Test Image 4](https://github.com/Kiragroh/ESAPI_Showcase_ComplexScripts/blob/master/EclipseDataMiner.png)
-
 ![Test Image 5](https://github.com/Kiragroh/ESAPI_Showcase_ComplexScripts/blob/master/EclipseDataMiner2.png)
-
 ![Test Image 6](https://github.com/Kiragroh/ESAPI_Showcase_ComplexScripts/blob/master/EclipseDataMiner3.png)
 - example output for one plan (real outout is in .csv-format)
 ![Test Image 7](https://github.com/Kiragroh/ESAPI_Showcase_ComplexScripts/blob/master/EclipseDataMiner4.png)
-
 ![Test Image 8](https://github.com/Kiragroh/ESAPI_Showcase_ComplexScripts/blob/master/EclipseDataMiner5.png)
 
 
