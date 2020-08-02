@@ -8,13 +8,17 @@ Why do I not share them too?:
 - in some parts/checks the scripts are clinic specific
 - fear that wrong usage or integration will lead to wrong clinical decisions
 
+0.) PlanCheck
+- check DoseConstraints and plan parameters for plans or planSums
+![GIF 1](https://github.com/Kiragroh/ESAPI_Showcase_ComplexScripts/blob/master/PlanCheckWithDVH.gif)
+
 1.) ContouringAssistant
 - adapted script from https://github.com/mtparagon5/ESAPI-Projects/tree/master/Projects/v15/OptiAssistant
 ![Test Image 1](https://github.com/Kiragroh/ESAPI_Showcase_ComplexScripts/blob/master/AutoContouring_newFeature_boolean.png)
 
 2.) AutoPlan-GUI
 - Autoplanning with GUI for User-input. More autoplanning features can easily be added.
-![Test Image 2](https://github.com/Kiragroh/ESAPI_Showcase_ComplexScripts/blob/master/AutoPlan-GUI.png)
+![Test Image 2](https://github.com/Kiragroh/ESAPI_Showcase_ComplexScripts/blob/master/AutoPlan-GUI.PNG)
 
 3.) STX-CalculateIndices-GUI
 - calculate Paddick-CI & -GI in Eclipse without HyperArc-License for single or multiple targets in plans or plansums.
