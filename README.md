@@ -18,7 +18,7 @@ Why do I not share them too?:
 
 3.) STX-CalculateIndices-GUI
 - calculate Paddick-CI & -GI in Eclipse without HyperArc-License for single or multiple targets in plans or plansums.
-![Test Image 3](https://github.com/Kiragroh/ESAPI_Showcase_ComplexScripts/blob/master/STX-Check-GUI.png)
+![Test Image 3](https://github.com/Kiragroh/ESAPI_Showcase_ComplexScripts/blob/master/STX-Check-GUI.PNG)
 
 4.) QA-Exporter
 - Standalone script to quickly export RP-files to Third-Party-QA programs
