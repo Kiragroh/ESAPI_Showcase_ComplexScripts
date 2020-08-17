@@ -2,7 +2,9 @@
 
 Screenshots of my often used complex ESAPI-GUI-Scripts. These screenshots should inspire you for your own projects.
 
-Why do I not share them too?:
+Questions at	m.grohmann@gmx.net.
+
+Why do I not share the source code?:
 - code is not user friendly because I build these scripts iterative with less time. would be much work to make them universally readable
 - many obvious and hidden features are implemented that would need a manual
 - in some parts/checks the scripts are clinic specific
