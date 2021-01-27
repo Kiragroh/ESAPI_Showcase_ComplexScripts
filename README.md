@@ -2,6 +2,11 @@
 
 Screenshots of my often used complex ESAPI-GUI-Scripts. These screenshots should inspire you for your own projects.
 
+Note:
+- script is optimized to work with Eclipse 15.1
+- absolute ESAPI-beginner should first look at my GettingStartedMaterial (collection of many helpful stuff from me or others and even includes a PDF version of some ESAPI-OnlineHelps)
+https://drive.google.com/drive/folders/1-aYUOIfyvAUKtBg9TgEETiz4SYPonDOO
+
 Questions at	m.grohmann@gmx.net.
 
 Why do I not share the source code?:
