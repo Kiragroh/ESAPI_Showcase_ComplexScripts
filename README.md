@@ -20,7 +20,7 @@ Why do I not share the source code?:
 - generate Reports with interactive DVH from GUI
 - script structure is adopted from LDClark (https://github.com/LDClark/PlanCheck) but changed a lot 
 ![GIF 1](https://github.com/Kiragroh/ESAPI_Showcase_ComplexScripts/blob/master/PlanCheckWithDVH.gif)
-- new PlanCheck version with possibility to add constraints in GUI or compare scripts in chrome
+- new PlanCheck version with possibility to add constraints in GUI or compare plans
 ![Test Image 1](https://github.com/Kiragroh/ESAPI_Showcase_ComplexScripts/blob/master/PlanCheck-update.PNG)
 
 1.) ContouringAssistant
