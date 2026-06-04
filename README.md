@@ -1,56 +1,133 @@
-# ESAPI_Showcase-ComplexScripts
+# ESAPI Showcase: Complex Clinical Workflow Scripts
 
-Screenshots of my often used complex ESAPI-GUI-Scripts. These screenshots should inspire you for your own projects.
+Visual showcase of larger Eclipse Scripting API (ESAPI) tools and workflow ideas used in radiotherapy treatment planning environments.
 
-Note:
-- script is optimized to work with Eclipse 15.1
-- absolute ESAPI-beginner should first look at my GettingStartedMaterial (collection of many helpful stuff from me or others and even includes a PDF version of some ESAPI-OnlineHelps)
-https://drive.google.com/drive/folders/1-aYUOIfyvAUKtBg9TgEETiz4SYPonDOO
+This repository is intentionally a showcase, not a source-code distribution. The screenshots and notes are meant to help ESAPI developers design safer user interfaces, plan-check workflows, reporting tools, DICOM export helpers, and data-mining utilities.
 
-Questions at	m.grohmann@gmx.net.
+Last refreshed: June 2026.
 
-Why do I not share the source code?:
-- code is not user friendly because I build these scripts iterative with less time. would be much work to make them universally readable
-- many obvious and hidden features are implemented that would need a manual
-- in some parts/checks the scripts are clinic specific
-- fear that wrong usage or integration will lead to wrong clinical decisions
+## Scope
 
-0.) PlanCheck
-- check DoseConstraints and plan parameters for plans or planSums
-- generate Reports with interactive DVH from GUI
-- script structure is adopted from LDClark (https://github.com/LDClark/PlanCheck) but changed a lot 
-![GIF 1](https://github.com/Kiragroh/ESAPI_Showcase_ComplexScripts/blob/master/PlanCheckWithDVH.gif)
-- new PlanCheck version with possibility to add constraints in GUI or compare plans
-![Test Image 1](https://github.com/Kiragroh/ESAPI_Showcase_ComplexScripts/blob/master/PlanCheck-update.PNG)
+- Screenshots and design notes for complex ESAPI GUI and stand-alone workflows.
+- Modernized ESAPI guidance for Eclipse/ESAPI 18.x-era development.
+- A shareable AI assistant skill for ESAPI code review and scripting support: [`skills/esapi-scripting/SKILL.md`](skills/esapi-scripting/SKILL.md).
+- No patient data, no clinical source code, and no site-specific rule engine implementation.
 
-1.) ContouringAssistant
-- adapted script from https://github.com/mtparagon5/ESAPI-Projects/tree/master/Projects/v15/OptiAssistant
-![Test Image 1](https://github.com/Kiragroh/ESAPI_Showcase_ComplexScripts/blob/master/AutoContouring_newFeature_boolean.png)
+Use GitHub issues for corrections or discussion. Do not post patient-identifiable information, screenshots from clinical patients, credentials, ARIA database details, or unapproved clinical scripts.
 
-2.) AutoPlan-GUI
-- Autoplanning with GUI for User-input. More autoplanning features can easily be added.
-![Test Image 2](https://github.com/Kiragroh/ESAPI_Showcase_ComplexScripts/blob/master/AutoPlan-GUI.PNG)
+## Why Source Code Is Not Included
 
-3.) STX-CalculateIndices-GUI
-- calculate Paddick-CI & -GI in Eclipse without HyperArc-License for single or multiple targets in plans or plansums.
-![Test Image 3](https://github.com/Kiragroh/ESAPI_Showcase_ComplexScripts/blob/master/STX-Check-GUI.PNG)
+The original tools were developed for local clinical workflows and contain site-specific assumptions, naming conventions, safety checks, and UI behavior. Releasing that code without local commissioning context could encourage unsafe reuse.
 
-4.) QA-Exporter
-- Standalone script to quickly export RP-files to Third-Party-QA programs
-- before and after exporting, additional tests will be made (Imager for PD activated, Gating deactivaded, etc.)
-- DICOM-Export functionality can be added to ESAPI via an extra DICOM-Daemon (Tutorial: https://github.com/VarianAPIs/Varian-Code-Samples/wiki/Scripting-the-Varian-DICOM-DB-Daemon-with-ESAPI -> Code has to be changed a little bit to work in standalone programs and for more modalities)
-![Test Image 8](https://github.com/Kiragroh/ESAPI_Showcase_ComplexScripts/blob/master/QA-Exporter.png)
+For real clinical deployment, each institution must implement and validate its own requirements, risk analysis, QA tests, approval workflow, and upgrade checks.
 
-5.) Eclipse-DataMiner
-- aquire data of specific patients or all or all but filtered
-- inspired by the GUI-structure from https://github.com/tkmd94/EclipseDataMiner but the output and features are mostly changed
-- DICOM-Export functionality can be added to ESAPI via an extra DICOM-Daemon (Tutorial: https://github.com/VarianAPIs/Varian-Code-Samples/wiki/Scripting-the-Varian-DICOM-DB-Daemon-with-ESAPI -> Code has to be changed a little bit to work in standalone programs and for more modalities)
-![Test Image 9](https://github.com/Kiragroh/ESAPI_Showcase_ComplexScripts/blob/master/EclipseDataMiner6.PNG)
-![Test Image 4](https://github.com/Kiragroh/ESAPI_Showcase_ComplexScripts/blob/master/EclipseDataMiner.png)
-![Test Image 5](https://github.com/Kiragroh/ESAPI_Showcase_ComplexScripts/blob/master/EclipseDataMiner2.png)
-![Test Image 6](https://github.com/Kiragroh/ESAPI_Showcase_ComplexScripts/blob/master/EclipseDataMiner3.png)
-- example output for one plan (real outout is in .csv-format)
-![Test Image 7](https://github.com/Kiragroh/ESAPI_Showcase_ComplexScripts/blob/master/EclipseDataMiner4.png)
-![Test Image 8](https://github.com/Kiragroh/ESAPI_Showcase_ComplexScripts/blob/master/EclipseDataMiner5.png)
+## Current ESAPI Notes
 
+The first versions of these tools were built around older Eclipse/ESAPI releases. For new work, verify behavior against the ESAPI version installed at your institution.
 
+Key ESAPI 18.x-era reminders:
+
+- ESAPI 18.0 projects target .NET Framework 4.8.
+- Binary plug-ins and stand-alone executables should be built x64.
+- ESAPI 18.0 assemblies use version `1.0.600`.
+- Common script types include single-file plug-ins, binary plug-ins (`.esapi.dll`), stand-alone executables, and ESAPI 18+ approval extension plug-ins.
+- Stand-alone executables must create ESAPI with `Application.CreateApplication()` on a single STA thread.
+- Stand-alone scripts may open database patients, but only one active patient object model should be held at a time; call `Application.ClosePatient()` before opening another patient.
+- Do not use live ESAPI objects from worker threads, `Task`, background workers, async continuations, or PLINQ. Copy primitive values out first.
+- Write-enabled automation requires explicit governance: script approval, `Patient.BeginModifications()`, controlled save/discard behavior, and clinical validation.
+- Approval extensions should primarily report readiness findings during plan approval. Blocking errors should be rare, validated, and institutionally agreed.
+
+More detail is in [`docs/ESAPI_18_UPDATE_NOTES.md`](docs/ESAPI_18_UPDATE_NOTES.md).
+
+## Showcase
+
+### 1. PlanCheck
+
+Plan and plan-sum checks with dose constraints, plan-parameter checks, interactive DVH review, and report generation.
+
+The script structure was initially inspired by [LDClark/PlanCheck](https://github.com/LDClark/PlanCheck), then heavily adapted for local workflows.
+
+![PlanCheck with DVH](PlanCheckWithDVH.gif)
+
+Newer GUI concept with interactive constraint editing and plan comparison:
+
+![PlanCheck update](PlanCheck-update.PNG)
+
+### 2. Contouring Assistant
+
+GUI-assisted contouring workflow inspired by OptiAssistant-style ESAPI projects. The concept combines user input, Boolean structure operations, and review-oriented UI feedback.
+
+![Contouring assistant](AutoContouring_newFeature_boolean.png)
+
+Union contouring concept:
+
+![Union contouring](UnionContouring-GUI.png)
+
+### 3. AutoPlan GUI
+
+Autoplanning workflow with a user-facing GUI. The concept separates protocol/user input from execution so that additional planning features can be added incrementally.
+
+![AutoPlan GUI](AutoPlan-GUI.PNG)
+
+### 4. SRS/STX Index Check
+
+Stereotactic plan review helper for Paddick conformity index and gradient index calculations for one or multiple targets in plans or plan sums.
+
+![STX check GUI](STX-Check-GUI.PNG)
+
+### 5. QA Exporter
+
+Stand-alone export workflow for third-party QA programs, including pre-export and post-export checks such as portal dosimetry imager state, gating settings, and modality-specific export requirements.
+
+![QA exporter](QA-Exporter.png)
+
+### 6. Eclipse Data Miner
+
+Patient, plan, structure, and dose-metric data extraction for selected patients or filtered cohorts. The GUI concept was inspired by [tkmd94/EclipseDataMiner](https://github.com/tkmd94/EclipseDataMiner), with different output and local feature design.
+
+![Eclipse Data Miner main](EclipseDataMiner6.PNG)
+
+![Eclipse Data Miner view 1](EclipseDataMiner.png)
+
+![Eclipse Data Miner view 2](EclipseDataMiner2.png)
+
+![Eclipse Data Miner view 3](EclipseDataMiner3.png)
+
+Example display of one plan; real exports are CSV-oriented:
+
+![Eclipse Data Miner output 1](EclipseDataMiner4.png)
+
+![Eclipse Data Miner output 2](EclipseDataMiner5.png)
+
+## AI Helper Skill
+
+This repository includes a public, shareable ESAPI helper skill for AI assistants:
+
+[`skills/esapi-scripting/SKILL.md`](skills/esapi-scripting/SKILL.md)
+
+Use it to orient an assistant before asking for ESAPI script review, refactoring, plan-check logic, DVH metric handling, stand-alone lifetime review, or approval extension design.
+
+Example prompt:
+
+```text
+Use the ESAPI helper skill in skills/esapi-scripting/SKILL.md.
+Review this ESAPI plan-check script for null context handling, dose units,
+stand-alone threading risks, write-enabled behavior, and clinical validation gaps.
+```
+
+## References
+
+- Varian public ESAPI documentation hub: <https://docs.developer.varian.com/articles/index.html>
+- Varian ESAPI object model article: <https://docs.developer.varian.com/articles/17.0/05_Eclipse_Scripting_API_Object_Model.html>
+- Varian ESAPI online API help: <https://docs.developer.varian.com/api/index.html>
+- Varian API Book: <https://varianapis.github.io/VarianApiBook.pdf>
+- Gateway Scripts first look at ESAPI 18+ approval extensions: <https://www.gatewayscripts.com/post/script-approval-extensions-v18-scripting-first-look>
+- Gateway approval extension example: <https://github.com/Gateway-Scripts/ApprovalChecks_ApprExt>
+- LDClark PlanCheck: <https://github.com/LDClark/PlanCheck>
+- EclipseDataMiner inspiration: <https://github.com/tkmd94/EclipseDataMiner>
+
+## Clinical Safety
+
+This repository does not provide medical software. Any ESAPI script used for patient care must be reviewed, tested, approved, commissioned, and maintained under the local clinical quality management system.
+
+No license is currently granted for reuse of screenshots or implementation details. Treat the repository as educational showcase material unless a separate license is added.

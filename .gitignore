@@ -1,0 +1,25 @@
+# Visual Studio / .NET artifacts
+bin/
+obj/
+.vs/
+*.user
+*.suo
+*.cache
+*.pdb
+*.dll
+*.exe
+
+# ESAPI deployment artifacts
+*.esapi.dll
+*.snk
+
+# Local data and logs
+*.log
+*.csv
+*.xlsx
+*.pdf
+*.dcm
+*.xml
+*.json
+*.bak
+*.tmp
