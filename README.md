@@ -1,5 +1,9 @@
 # ESAPI Showcase: Complex Clinical Workflow Scripts
 
+## General ESAPI Guidance
+
+For current build/runtime notes, clinical-safety reminders, stand-alone threading rules, write-enabled script governance, and ESAPI 18.x considerations, see [`docs/ESAPI_GENERAL_NOTES.md`](docs/ESAPI_GENERAL_NOTES.md).
+
 Visual showcase of larger Eclipse Scripting API (ESAPI) tools and workflow ideas used in radiotherapy treatment planning environments.
 
 This repository is intentionally a showcase, not a source-code distribution. The screenshots and notes are meant to help ESAPI developers design safer user interfaces, plan-check workflows, reporting tools, DICOM export helpers, and data-mining utilities.
@@ -9,6 +13,8 @@ Last refreshed: June 2026.
 ## Scope
 
 - Screenshots and design notes for complex ESAPI GUI and stand-alone workflows.
+- This repository is currently offered primarily as an overview and reference collection.
+- Selected reusable ideas, examples, or implementation pieces are published separately in my other repositories when they are suitable for broader use.
 - Modernized ESAPI guidance for Eclipse/ESAPI 18.x-era development.
 - A shareable AI assistant skill for ESAPI code review and scripting support: [`skills/esapi-scripting/SKILL.md`](skills/esapi-scripting/SKILL.md).
 - No patient data, no clinical source code, and no site-specific rule engine implementation.
